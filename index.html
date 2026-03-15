@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftBank | Simple CRUD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>SwiftBank Dashboard</h1>
+            <div class="balance-card">
+                <p>Total Balance</p>
+                <h2 id="totalBalance">$0.00</h2>
+            </div>
+        </header>
+
+        <section class="transaction-form">
+            <h3>Add New Transaction</h3>
+            <form id="bankForm">
+                <input type="hidden" id="editIndex">
+                <input type="text" id="description" placeholder="Description (e.g., Salary, Rent)" required>
+                <input type="number" id="amount" placeholder="Amount" required>
+                <select id="type">
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+                <button type="submit" id="submitBtn">Save Transaction</button>
+            </form>
+        </section>
+
+        <section class="transaction-history">
+            <h3>Recent Transactions</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Description</th>
+                        <th>Amount</th>
+                        <th>Type</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="transactionList">
+                    </tbody>
+            </table>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
